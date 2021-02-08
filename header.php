@@ -1,3 +1,4 @@
+<?php include 'stock.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
