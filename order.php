@@ -17,7 +17,7 @@
   <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
   
   <br>
-  <input class="buyBtn" type="submit" value="下單預定">
+  <input class="buyBtn" type="submit" value="下單預訂">
 </form> 
 
 <?php include 'footer.php';?>
