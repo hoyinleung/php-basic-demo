@@ -4,6 +4,7 @@
 
   <label for="gem_name">預定產品名稱 </label>
   <input type="hidden" id="gem_id" name="gem_id" value="<?php echo $_GET['gem_id'];?>">
+  
   <h2><?php echo $gems[$_GET['gem_id']-1]['name'];?></h2>
 
   <label for="name">你的稱呼:</label>
