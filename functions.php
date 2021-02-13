@@ -3,11 +3,39 @@ if($_GET['op']=='createOrder')
 {
     createOrder();
 }
+if($_GET['op']=='checkLogin')
+{
+    checkLogin($_POST['email'],$_POST['password']);
+}
 if($_GET['op']=='logout')
 {
-    echo '登出頁';
+    logout();
 }
 
+function logout()
+{
+    session_start();
+    session_destroy();
+    header("Location: /");
+}
+function checkLogin($email, $password)
+{
+    $staffEmail     =   "hello@leunghoyin.hk";
+    $staffPassword  =   "password123";
+
+    if($email == $staffEmail && $staffPassword == $password)
+    {
+        //認證是一個職員 SESSION
+        session_start();
+        $_SESSION['email'] = $email;
+
+        header("Location: /allOrders.php");
+    }
+    else
+    {
+        header("Location: /login.php");
+    }
+}
 function createOrder(){
     /* echo $_POST['gem_id']."<br>";
     echo $_POST['name']."<br>";

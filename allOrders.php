@@ -1,6 +1,12 @@
-<?php include('header.php'); ?>
+<?php include('header.php'); 
+
+//不是職員的不可以觀看訂單
+if(!isset($_SESSION['email']))
+    header("Location: /login.php");
+?>
 
 <h1>收到的訂單</h1>
+<h2>你的登入電郵是:<?php echo $_SESSION['email'];?></h2>
 
 <?php
 //拿訪客的訂單資料
