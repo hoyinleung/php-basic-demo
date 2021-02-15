@@ -1,1 +1,107 @@
-/**/
+html {
+    font-family:"Noto Sans TC","微軟正黑體",sans-serif;
+    font-size:24px;
+    color:#313d38;
+    box-sizing: border-box;
+    margin:0;
+}
+nav{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #313d38;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    color:azure;
+    min-height: 60px;
+}
+nav a{
+    color:azure;
+    text-decoration: none;
+}
+.container{
+    max-width: 960px;
+    margin:0 auto;
+    line-height: 1.7;
+}
+.flex-grid 
+{
+    display: flex;
+    max-width: 960px;
+    margin:0 auto;
+    text-align: center;
+    overflow-wrap: normal;
+}
+.buyBtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    margin: 20px 2px;
+    cursor: pointer;
+  }
+.col {
+flex: 1;
+}
+h1{
+    font-size: 240%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+h2{
+    font-size: 180%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+img{
+    height: 200px;
+}
+footer{
+    text-align: center;
+    margin: 36px 0;
+}
+form{
+    text-align: center;
+}
+input{
+    margin-bottom: 20px;
+}
+.clientMenu{
+    padding-left:10px;
+    position: relative;
+    display: block;
+    float: left;
+}
+.thankyouText{
+    text-align:center;
+    font-size: 140%;
+    margin: 80px 0;
+}
+.staffMenu{
+    padding-right:10px;
+    position: relative;
+    display: block;
+    float: right;
+}
+.order{
+    border: black dotted;
+    margin: 40px 0;
+}
+nav ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0px 6px;
+  }
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 960px) {
+    .flex-grid {
+        display: block;
+      }
+}

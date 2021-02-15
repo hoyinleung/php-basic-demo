@@ -12,6 +12,10 @@ if($_GET['op']=='logout')
     logout();
 }
 
+function isStaff()
+{
+    return isset($_SESSION['email']);
+}
 function logout()
 {
     session_start();

@@ -1,8 +1,7 @@
 <?php include('header.php'); 
 
 //不是職員的不可以觀看訂單
-if(!isset($_SESSION['email']))
-    header("Location: /login.php");
+if(!isStaff()) header("Location: /");
 ?>
 
 <h1>收到的訂單</h1>
