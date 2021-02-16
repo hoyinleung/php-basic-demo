@@ -1,13 +1,16 @@
 <?php
-if($_GET['op']=='createOrder')
+$op ='none';
+if(isset($_GET['op'])) $op = $_GET['op'];
+
+if($op=='createOrder')
 {
     createOrder();
 }
-if($_GET['op']=='checkLogin')
+if($op=='checkLogin')
 {
     checkLogin($_POST['email'],$_POST['password']);
 }
-if($_GET['op']=='logout')
+if($op=='logout')
 {
     logout();
 }

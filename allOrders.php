@@ -1,4 +1,5 @@
 <?php include('header.php'); 
+include('functions.php'); 
 
 //不是職員的不可以觀看訂單
 if(!isStaff()) header("Location: /");
