@@ -26,14 +26,7 @@ CREATE TABLE IF NOT EXISTS `gem` (
   KEY `Index 1` (`gem_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COMMENT='產品資料.....';
 
--- Dumping data for table php_gem.gem: ~0 rows (approximately)
-/*!40000 ALTER TABLE `gem` DISABLE KEYS */;
-INSERT INTO `gem` (`gem_id`, `name`, `price`, `image`, `remaining`) VALUES
-	(1, '白珍珠', 12, '1.jpg', 5),
-	(2, '紅心寶石', 100, '2.jpg', 5),
-	(3, '鑽石', 500, '3.jpg', 5),
-	(4, '綠寶石', 250, '4.jpg', 5);
-/*!40000 ALTER TABLE `gem` ENABLE KEYS */;
+-- Data exporting was unselected.
 
 -- Dumping structure for table php_gem.order
 CREATE TABLE IF NOT EXISTS `order` (
@@ -45,9 +38,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   KEY `Index 1` (`order_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table php_gem.order: ~0 rows (approximately)
-/*!40000 ALTER TABLE `order` DISABLE KEYS */;
-/*!40000 ALTER TABLE `order` ENABLE KEYS */;
+-- Data exporting was unselected.
 
 -- Dumping structure for table php_gem.staff
 CREATE TABLE IF NOT EXISTS `staff` (
@@ -58,13 +49,7 @@ CREATE TABLE IF NOT EXISTS `staff` (
   KEY `Index 1` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table php_gem.staff: ~4 rows (approximately)
-/*!40000 ALTER TABLE `staff` DISABLE KEYS */;
-INSERT INTO `staff` (`id`, `email`, `password`, `name`) VALUES
-	(1, 'hello@leunghoyin.hk', 'password123', 'Ho Yin'),
-	(4, 'peterlau@leunghoyin.hk', '12345', 'Peter Lau'),
-	(5, 'staff@gmail.com', '56789', 'John');
-/*!40000 ALTER TABLE `staff` ENABLE KEYS */;
+-- Data exporting was unselected.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
