@@ -28,10 +28,10 @@ CREATE TABLE IF NOT EXISTS `order` (
 
 -- Dumping structure for table php_gem.staff
 CREATE TABLE IF NOT EXISTS `staff` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `id` int(11) NOT NULL AUTO_INCREMENT,
   KEY `Index 1` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
