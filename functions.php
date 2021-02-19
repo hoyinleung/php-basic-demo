@@ -51,6 +51,8 @@ function checkLogin($email, $password)
     }
 }
 function createOrder(){
+
+    global $dbConnection;
     /* echo $_POST['gem_id']."<br>";
     echo $_POST['name']."<br>";
     echo $_POST['email']."<br>";
@@ -58,11 +60,35 @@ function createOrder(){
     echo date('Y-m-d H:i:s')."<br>"; */
 
     //儲存訂單
-    $myfile = fopen("data.csv", "a") or die("未能開啟檔案");
+    $sql = "INSERT INTO `php_gem`.`order` (
+        `client_name`, 
+        `client_email`,
+         `quantity`, 
+         `order_time`, 
+         `gem_id`
+         ) VALUES (
+         '{$_POST['name']}', 
+         '{$_POST['email']}',
+         {$_POST['quantity']}, 
+         '".date('Y-m-d H:i:s')."',
+         {$_POST['gem_id']})";
+
+    //寫入MySQL資料庫
+    if(mysqli_query($dbConnection, $sql))
+    {
+        //你可以在這裡減去gem table的remaining存貨
+
+        //轉變頁面
+        header("Location: /order-completed.php");
+    }
+    else{
+        //你可以加你的order失敗頁
+    }
+
+    /* $myfile = fopen("data.csv", "a") or die("未能開啟檔案");
     $data = $_POST['gem_id'].','.$_POST['name'].','.$_POST['email'].','.$_POST['quantity'].','.date('Y-m-d H:i:s')."\r\n";
     fwrite($myfile, $data);
-    fclose($myfile);
+    fclose($myfile); */
 
-    //轉變頁面
-    header("Location: /order-completed.php");
+    
 }
