@@ -1,4 +1,6 @@
 <?php
+include 'dbConnect.php';
+
 $op ='none';
 if(isset($_GET['op'])) $op = $_GET['op'];
 
@@ -27,10 +29,15 @@ function logout()
 }
 function checkLogin($email, $password)
 {
-    $staffEmail     =   "hello@leunghoyin.hk";
-    $staffPassword  =   "password123";
+    global $dbConnection;
+    $staffQ = mysqli_query($dbConnection, "SELECT * FROM `staff` WHERE `email`='".$email."'");
 
-    if($email == $staffEmail && $staffPassword == $password)
+    $staff = mysqli_fetch_assoc($staffQ);
+
+    /* $staffEmail     =   "hello@leunghoyin.hk";
+    $staffPassword  =   "password123"; */
+
+    if($email == $staff['email'] && $staff['password'] == $password)
     {
         //認證是一個職員 SESSION
         session_start();
