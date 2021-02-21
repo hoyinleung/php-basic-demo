@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include_once 'header.php'; ?>
 
 <form action="/functions.php?op=createOrder" method="post">
 
@@ -20,4 +20,4 @@
   <input class="buyBtn" type="submit" value="下單預訂">
 </form> 
 
-<?php include 'footer.php';?>
+<?php include_once 'footer.php';?>

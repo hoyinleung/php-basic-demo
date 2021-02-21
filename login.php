@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include_once('header.php'); ?>
 
 <form action="functions.php?op=checkLogin" method="post">
 
@@ -12,4 +12,4 @@
   <input type="submit" value="登入">
 </form> 
 
-<?php include('footer.php'); ?>
+<?php include_once('footer.php'); ?>

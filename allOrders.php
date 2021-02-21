@@ -1,5 +1,5 @@
-<?php include('header.php'); 
-include('functions.php'); 
+<?php include_once('header.php'); 
+include_once('functions.php'); 
 
 //不是職員的不可以觀看訂單
 if(!isStaff()) header("Location: /");
@@ -43,4 +43,4 @@ foreach($orders as $order)
 }*/
 ?>
 
-<?php include('footer.php'); ?>
+<?php include_once('footer.php'); ?>

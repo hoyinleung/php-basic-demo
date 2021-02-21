@@ -1,7 +1,7 @@
 <?php
 session_start();
-include 'stock.php';
-include 'dbConnect.php';
+include_once 'stock.php';
+include_once 'dbConnect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,5 @@
 <?php
-include 'dbConnect.php';
+include_once 'dbConnect.php';
 
 $op ='none';
 if(isset($_GET['op'])) $op = $_GET['op'];
@@ -37,7 +37,7 @@ function checkLogin($email, $password)
     /* $staffEmail     =   "hello@leunghoyin.hk";
     $staffPassword  =   "password123"; */
 
-    if($email == $staff['email'] && $staff['password'] == $password)
+    if($email == $staff['email'] && password_verify($password,$staff['password']))
     {
         //認證是一個職員 SESSION
         session_start();
